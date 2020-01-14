@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EducationAbsenceApplication</string>
+    <string name="pass_hint">Password:</string>
+    <string name="title">Education Absence Application</string>
+    <string name="email_hint">Email Address:</string>
+    <string name="login_reg_btn_txt">Register</string>
+    <string name="login_login_btn_txt">Login</string>
 </resources>
