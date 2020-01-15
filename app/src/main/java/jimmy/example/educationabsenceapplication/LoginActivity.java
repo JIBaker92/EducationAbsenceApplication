@@ -35,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mAuth = FirebaseAuth.getInstance();
+
         loginEmailText = (EditText) findViewById(R.id.login_email);
         loginPassText = (EditText) findViewById(R.id.login_password);
         loginBtn = (Button) findViewById(R.id.login_btn);
@@ -48,10 +50,11 @@ public class LoginActivity extends AppCompatActivity {
                 String loginEmail = loginEmailText.getText().toString();
                 String loginPass = loginPassText.getText().toString();
 
-                if(TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty(loginPass)) {
-                    loginProgress.setVisibility(View.VISIBLE);
+                if(!TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty((loginPass))) {
+                  loginProgress.setVisibility(View.VISIBLE);
 
-                    mAuth.signInWithEmailAndPassword(loginEmail, loginPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    mAuth.signInWithEmailAndPassword(loginEmail, loginPass).addOnCompleteListener
+                            (new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
@@ -59,15 +62,15 @@ public class LoginActivity extends AppCompatActivity {
 
                                 sendToMain();
 
-                            }else{
+                            }else {
 
                                 String errorMessage = task.getException().getMessage();
-                                Toast.makeText(LoginActivity.this, "Error: " + errorMessage, Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, "Error: "
+                                        + errorMessage, Toast.LENGTH_LONG).show();
+
+                                loginProgress.setVisibility(View.INVISIBLE);
 
                             }
-
-                            loginProgress.setVisibility(View.INVISIBLE);
-
                         }
                     });
 
