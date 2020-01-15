@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 String loginEmail = loginEmailText.getText().toString();
                 String loginPass = loginPassText.getText().toString();
 
-                if(!TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty((loginPass))) {
+                if(!TextUtils.isEmpty(loginEmail) && !TextUtils.isEmpty(loginPass)) {
                   loginProgress.setVisibility(View.VISIBLE);
 
                     mAuth.signInWithEmailAndPassword(loginEmail, loginPass).addOnCompleteListener
@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (currentUser != null) {
             sendToMain();
