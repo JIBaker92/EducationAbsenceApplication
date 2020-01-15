@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "325825436389",
+    "firebase_url": "https://education-absence-application.firebaseio.com",
+    "project_id": "education-absence-application",
+    "storage_bucket": "education-absence-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325825436389:android:bf249460e1481e61a2120c",
+        "android_client_info": {
+          "package_name": "jimmy.example.educationabsenceapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325825436389-fqaheg1ncaqm74kibdj3hg02pj4n8nh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jimmy.example.educationabsenceapplication",
+            "certificate_hash": "823eec782a4acb51039477c4c6f60a4b2d899d99"
+          }
+        },
+        {
+          "client_id": "325825436389-mtligl3nnmr4asdd7kbhcn2jqbq2j4hq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAezidgcBboBucC3aDBgBu1nkMNKY40Jkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325825436389-mtligl3nnmr4asdd7kbhcn2jqbq2j4hq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
